@@ -1,13 +1,12 @@
-package  mycollection;
+package mycollection;
 
 import java.util.*;
 
 // LinkedList implementation of Queue is normal FIFO queue, but it is slower than ArrayQueue
+public class LinkedLists {
 
-public class LinkedLists{
     public static void main(String[] args) {
         Queue<Integer> q1 = new LinkedList<>();
-
 
         // To add element at back
         q1.add(1);  // throws exception if fails (If queue is full)
@@ -35,4 +34,4 @@ public class LinkedLists{
 /*
  javac mycollection/*.java
  java mycollection/LinkedLists
-*/
+ */
