@@ -9,25 +9,16 @@ public class PriorityQueues{
         p1.offer(22);
         p1.offer(44);
 
-        System.err.println(p1); // [22, 101, 44]
-        /**
-           22
-         /      \
-      100       44 
-         */
+        System.err.println(p1.peek()); // [22, 101, 44]
+
  
         Queue<Integer> p2 = new PriorityQueue<>(Collections.reverseOrder()); // Largest on top
         p2.offer(101);
         p2.offer(22);
         p2.offer(44);
 
-        System.err.println(p2); // [101, 22, 44]
-
-         /**
-           100
-         /      \
-      22       44 
-         */
+        System.err.println(p2.peek()); // [101, 22, 44]
+    
     }
 }
 
