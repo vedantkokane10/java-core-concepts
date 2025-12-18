@@ -1,0 +1,61 @@
+Insertion Logic
+-> When we insert any data in HashSet / LinkedHashSet
+-> Java first calls the hashCode() method on the object
+-> hashCode() generates a hash value
+-> Using this hash value, a bucket index is calculated
+
+-> If the bucket is empty
+    -> The element is inserted directly
+
+-> If the bucket is not empty
+    -> Java calls equals() method
+    -> If equals() returns true
+        -> Duplicate element
+        -> New element is NOT added
+    -> If equals() returns false
+        -> Collision occurs
+        -> Element is added to the same bucket
+
+-> HashSet
+    -> Does NOT maintain insertion order
+
+-> LinkedHashSet
+    -> Maintains insertion order
+    -> Internally uses a doubly linked list
+    -> Does NOT allow duplicate elements
+
+-> For Custom Data Types (Example: Student class)
+    -> If equals() and hashCode() are NOT overridden
+        -> hashCode() is generated using memory address
+        -> equals() compares references (==)
+
+-> Example
+    -> Set<Student> s1 = new HashSet<>();
+    -> s1.add(new Student(40, 50));
+    -> s1.contains(new Student(40, 50)) -> false
+
+-> Reason
+    -> Two different objects are created
+    -> Memory addresses are different
+    -> HashSet treats both objects as different
+
+-> Solution
+    -> Override equals() method
+    -> Override hashCode() method
+    -> Objects with same data are treated as equal
+    -> Duplicate objects are avoided
+
+-> equals() and hashCode()
+    -> Belong to Object class
+    -> Every class by default extends Object
+
+-> Built-in Wrapper Classes
+    -> Integer
+    -> String
+    -> Double
+    -> Boolean
+    -> These classes already override equals() and hashCode()
+
+-> Important Rule
+    -> If two objects are equal using equals()
+        -> They MUST return the same hashCode()

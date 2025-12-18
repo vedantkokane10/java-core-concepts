@@ -1,0 +1,16 @@
+Insertion Logic
+-> When we insert any data in the hashSet/LinkedHashSet it passes that data to hashCode() functionfirst and genrates a key
+-> Once a hashed key is generated, a bucket is found 
+    -> which is empty in HashSet case
+    -> for LinkedHashSet there is linkedlist maintained for values so by default we can add many values to same bucket
+-> For Custom DataTypes i.e classes as Data (Ex Student class)
+    -> The hash code is memory address
+        -> So, Suppose 
+        -> Set<Student> s1 = new HashSet<>();
+        -> s1.insert(new Student(40, 50));
+        -> if we test using s1.contains(new Student(40,50)) -> then this give false
+            -> because the memory address would be different for both the objects of Student class even if the data is same 
+            -> Set is treating the above 2 objects as different ones
+            -> We need to override equals() & hashCode() method for Student class, inorder to avoid duplicate objects with same data
+            -> equals() and hashCode() are methods of object Class (Every class by default extends Object class)
+            -> all the existing Datatypes like Integer etc already implemented the equalsTo() method

@@ -1,7 +1,7 @@
 package PriorityQueueExample;
 
 
-public class Student implements  Comparable<Student>{
+public class Student implements Comparable<Student>{
     private int math;
     private int science;
 
@@ -15,7 +15,13 @@ public class Student implements  Comparable<Student>{
         return ans;
     }
 
+    public int getMath(){
+        return this.math;
+    }
 
+    public int getScience(){
+        return this.science;
+    }
 
     @Override
     public int compareTo(Student obj) {
