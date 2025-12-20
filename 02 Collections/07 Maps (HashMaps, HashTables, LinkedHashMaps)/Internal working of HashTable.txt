@@ -1,0 +1,26 @@
+🔹 Internal Working of Map (Hashtable)
+1️⃣ Key is passed to put(key, value)
+2️⃣ hashCode() of the key is called
+3️⃣ Hash value is processed and bucket index is calculated
+4️⃣ Hashtable checks that bucket
+    -> If bucket is empty → new entry is inserted
+    -> If bucket is not empty → collision occurs
+5️⃣ Collision handling
+    -> Keys are compared using equals()
+    -> If key already exists → value is replaced
+    -> If key is different → new node is added
+6️⃣ Bucket structure
+    -> Uses LinkedList only
+❌ No Red-Black Tree optimization
+7️⃣ Thread safety
+    -> All methods are synchronized
+    -> Only one thread can access at a time
+8️⃣ Rehashing
+    -> Happens when size exceeds threshold
+    -> Capacity is increased and entries are rehashed
+
+📌 Notes
+❌ Null key not allowed
+❌ Null value not allowed
+❌ Slower than HashMap
+✔ Thread-safe (legacy class)

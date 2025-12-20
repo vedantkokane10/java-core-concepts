@@ -1,0 +1,18 @@
+- TreeMap implements NavigavleMap interface which indeed implements the SortedMap interface
+- SortedMap interface implements the Map interface
+- TreeMap stores keys in a sorted manner
+- TreeMap uses balanced trees
+- Searching in a HashMap is faster as compare to the TreeMap, as hashing algorithms offer better performance than searching algorithms
+- NavigavleMap has navigable functions which are used to find closest matches for specific search targets
+- In addition to SortedMap function the NavigavleMap has functions which are analogous to the functions of NavigavleSet
+- Functions of NavigavleMa (First/Last entry) -
+    -> Map.Entry<K,V> pollFirstEntry()
+    -> Map.Entry<K,V> pollLastEntry()
+    -> Map.Entry<K,V> firstEntry()
+    -> Map.Entry<K,V> lasttEntry()
+- Functions of NavigavleMa (Closest key) -
+   -> K ceilingKey(K key)
+   -> K floorKey(K key)
+   -> K higherKey(K key)
+   -> K lowerKey(K key)
+

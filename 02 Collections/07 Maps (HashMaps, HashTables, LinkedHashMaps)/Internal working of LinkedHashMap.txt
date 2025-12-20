@@ -1,0 +1,28 @@
+🔹 Internal Working of Map (LinkedHashMap)
+1️⃣ Key is passed to put(key, value)
+2️⃣ hashCode() of the key is called
+3️⃣ Hash value is processed and bucket index is calculated
+4️⃣ LinkedHashMap checks that bucket
+    -> If bucket is empty → new entry is inserted
+    -> If bucket is not empty → collision occurs
+5️⃣ Collision handling
+    -> Keys compared using equals()
+    -> If same key → value replaced
+    -> Else → new node added
+6️⃣ Bucket structure
+    -> Uses HashMap internal structure
+    -> Java 8+: LinkedList → Red-Black Tree when needed
+7️⃣ Ordering
+    -> Maintains a doubly linked list
+    -> Preserves:
+    -> Insertion order (default)
+    -> Access order (if enabled)
+8️⃣ Rehashing
+    -> Same as HashMap
+    -> Capacity doubled, entries redistributed
+
+📌 Notes
+✔ Allows one null key
+✔ Allows multiple null values
+❌ Not thread-safe
+✔ Predictable iteration order

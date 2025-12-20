@@ -41,6 +41,18 @@ public  class ArrayLists{
         list3.addAll(2, list2);  // addAll(index, list) -> adds a list after index
         System.out.println(list4);
         System.out.println(list3);
+
+
+        // sorting arrays
+        List<Integer> arr = new ArrayList<>(Arrays.asList(5,3,2,1,2,4,6,9,7));
+        Collections.sort(arr);
+        System.out.println("sorted in ascending order - " + arr);
+
+
+        // descending order
+        Collections.sort(arr, (a,b) -> b-a); 
+        //Collections.sort(arr, Collections.reverseOrder()); // <- this would also work
+        System.out.println("sorted in descending order - " + arr);
     }
 }
 

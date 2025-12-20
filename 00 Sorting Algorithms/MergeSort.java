@@ -1,6 +1,10 @@
 import java.util.*;
 
-public class MergeSortClass{
+
+// TC -> Best/Avg/Worst => O(nlog(n)) 
+// SC -> O(log(n) + n) => O(n) -> (Recursive stack space O(log(n)), Auxillary array O(n) used during merge() function)
+
+public class MergeSort {
 
     private static List<Integer> merge(int start, int mid, int end, List<Integer> arr){
         List<Integer> left = new ArrayList<>();

@@ -42,7 +42,6 @@ public class TreeSets{
         
         System.err.println("Floor - " + t2.floor(5));   // Returns the greatest element in this set less than or equal to the given element, or null if there is no such element.
         System.err.println("Ceiling - " + t2.ceiling(5)); // Returns the least element in this set greater than or equal to the given element, or null if there is no such element.
-
         System.err.println("Lower - " + t2.lower(5));   // Returns the greatest element in this set strictly less than the given element, or null if there is no such element.
         System.err.println("Higher - " + t2.higher(5)); //Returns the least element in this set strictly greater than the given element, or null if there is no such element.
 

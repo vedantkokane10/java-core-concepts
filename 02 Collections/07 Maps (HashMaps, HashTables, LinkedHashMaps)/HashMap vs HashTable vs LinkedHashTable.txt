@@ -1,0 +1,22 @@
+HashMap ->
+    -> Not thread-safe (No Synchronization like mutex or lock)
+    -> Faster as only it is meant for a single thread use
+    -> Allows one null key and multiple null values
+    -> Generally faster due to lack of synchronization
+    -> Keys are not ordered
+
+LinkedHashMap ->
+    -> Maintains elements in insertion order
+    -> Not thread-safe (No Synchronization like mutex or lock)
+    -> Allows one null key and multiple null values
+    -> Slightly slower than HashMap due to the linked list overhead for ordering
+    -> its implementation is similar to HashSet (image in Sets)
+
+HashTable ->
+    -> Synchronized (thread-safe)
+    -> Does not allow null keys or values; throws NullPointerException
+    -> Slower due to synchronization
+    -> Keys are not ordered
+
+
+    
