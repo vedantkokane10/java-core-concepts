@@ -1,0 +1,39 @@
+**** Multi-threading is not a JAVA specific-concept, it is a universal Operating System's core concept, Java only provides APIs to use OS-level threads.
+
+Multitasking in process:
+    -> While executing programs, each program create multiple processess for execution of sub-tasks
+    -> Each process within a program is independent of each other. They have their own memory, resources etc
+    -> Execution of multiple programs at the same time (concurrently) is multitasking in process.
+    -> The CPU switches between the different programs (processes) while preserving the context of the process/program
+    -> context -> precess state, Stack, Registers, Program counter
+    -> Ex Writing code in VSCode and switching to Notes App at same time 
+    -> we are switiching from VSCode executing process to Notes App process
+
+Multitasking in Threads:
+    -> Thread is smallest execution unit of a process
+    -> Threads share same memory and resources as they are part of same process
+    -> Threads have separate stacks & program counters
+    -> Thread switching is faster than process switching.
+    -> Ex In a browser on youtube.com we are playing a video and at the same time new videos are loaded (recommendation) that can be played next on sidebar
+    -> All threads belong to one browser process.
+    -> Thread are 2 types User and Daemon
+
+User Threads:
+    -> Created by the Application
+    -> JVM waits for them to finish
+    -> JVM does NOT exit until all user threads complete
+    -> Main() function (public static void main()) is also a user thread
+
+Daemon Threads:
+    -> These are background service Threads
+    -> JVM does not wait for them to finish their execution
+    -> Automatically terminated when all user threads finish
+    -> Ex Garbage Collectior, background monitoring thread
+
+Threads in JAVA:
+    -> Thread is class which implements the Runnable Interface, the Runnable interface has only 1 abstract function which is run()
+    -> The main() method executes in a thread called the main thread
+    -> Threads created inside main() are child threads of the main thread
+    -> This relationship is logical, not hierarchical in terms of control
+    -> The main thread does not control child threads after starting them 
+    -> All threads are scheduled independently by the JVM/OS
