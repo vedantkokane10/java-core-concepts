@@ -5,7 +5,7 @@ Multitasking in process:
     -> Each process within a program is independent of each other. They have their own memory, resources etc
     -> Execution of multiple programs at the same time (concurrently) is multitasking in process.
     -> The CPU switches between the different programs (processes) while preserving the context of the process/program
-    -> context -> precess state, Stack, Registers, Program counter
+    -> context -> process state, Stack, Registers, Program counter
     -> Ex Writing code in VSCode and switching to Notes App at same time 
     -> we are switiching from VSCode executing process to Notes App process
 
